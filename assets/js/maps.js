@@ -1,4 +1,62 @@
-class localizacion{
+let map;
+let infoWindow;
+
+function initMap(){
+	navigator.geolocation.getCurrentPosition(position=>{
+		lati = position.coords.latitude;
+		log = position.coords.longitude;
+
+		let latitudeLongitude = new google.maps.LatLng(lati, log);
+		let options = {
+			center: latitudeLongitude,
+			zoom: 15,
+			mapTypeId: google.maps.MapTypeId.roadmap			
+			};
+
+			console.log(position);
+		map = new google.maps.Map(document.getElementById('map'), options)		
+		infoWindow = new google.maps.InfoWindow;
+
+		 var request = {
+            location: latitudeLongitude,
+            radius: '500',
+            type: ['food'],
+            key: 'AIzaSyBQearEk9C4QkT-lWKttFnXZgeonntEqaQ',
+        };
+            //crear service
+        service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, callback);
+
+
+        function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (let i = 0; i < results.length; i++) {
+                    let place = results[i];
+                    
+
+
+                }
+
+            }
+
+        };
+
+	})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*class localizacion{
 	constructor(callback){
 		if(navigator.geolocation){
 			//obtenemos ubicacion
@@ -26,4 +84,4 @@ function initMap() {//toma la ubicacion actual
 		let map = document.getElementById('map');
 		const mapa = new google.maps.Map(map, options);
 	});
-}
+*/

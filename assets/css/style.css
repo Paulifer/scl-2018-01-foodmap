@@ -1,7 +1,11 @@
 body{
 	background-color: black;
 }
+h1{
+	color: yellow;
+}
 #map{
+	text-align: center;
 	width: 500px;
 	height: 500px;
 }
