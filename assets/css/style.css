@@ -1,0 +1,31 @@
+body{
+	background-color: black;
+}
+#map{
+	width: 500px;
+	height: 500px;
+}
+#cargando{
+  text-align: center;
+  width: 3em;
+}
+
+section{
+	background-color: white;
+}
+/*Pantalla principal de app*/
+#muro{
+  display: none;
+  background-image: url();
+  background-size: 100%;
+  background-color: white;
+}
+#primeraPantalla{
+	background-color: black;
+}
+.divDisplayNone{
+	display: none;
+}
+.divDisplayBlock{
+	display: block;
+}
