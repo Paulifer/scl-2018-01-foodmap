@@ -10,9 +10,6 @@ body{
   width: 3em;
 }
 
-section{
-	background-color: white;
-}
 /*Pantalla principal de app*/
 #muro{
   display: none;

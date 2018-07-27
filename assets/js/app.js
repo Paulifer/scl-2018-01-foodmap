@@ -4,16 +4,3 @@ document.getElementById('muro').style.display = 'block'; }, 3000);
 
 
 
-class localizacion{
-	constructor(callback){
-		if (navigator.geolacation) {
-			//obtenemos ubicacion
-			navigator.geolacation.getCurrentPosition((position)=>{
-				this.latitude = position.coords.latitude;
-				this.longitude = position.coords.longitude;
-			})
-		}else{
-			alert("tu navegador no soporta geolacalicacion")
-		}
-	}
-}
